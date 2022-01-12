@@ -8,6 +8,7 @@
         
         <script type="module" src="cardInfo-component.js"></script>
         <script type="module" src="gftButton-component.js"></script>
+        <script type="module" src="miBoton-component.js"></script>
     </head>
     <body>
         
@@ -24,5 +25,18 @@
 
         <card-info nombre="Daniel" apellido-paterno="Mendoza" apellido-materno="Martinez" imagen="bbva-1" color="red" edad="34" city="cdmx"></card-info>
         <gft-button color="#f44336" bordeado="1"></gft-button>
+
+        <mi-boton></mi-boton>
+
+        <script>
+            var miBoton = document.querySelector('mi-boton')
+            console.log(miBoton)
+            miBoton.addEventListener('mi-boton-click', ()=> {
+                console.log("escuchado boton fuera del componente")
+                
+                var edad = parseInt( document.querySelector('card-info').getAttribute('edad'))
+                document.querySelector('card-info').setAttribute('edad', edad + 1)
+            })
+        </script>
     </body>
 </html>
