@@ -128,4 +128,5 @@
 
 /* Defino mi etiqueta */
 window.customElements.define("card-info", CardInfoElement);
+/*  */
 
